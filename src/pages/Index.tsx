@@ -1,8 +1,12 @@
+import React from "react";
 import App from "../app";
+
 export default function Index() {
   return (
     <App>
-      {/* Content like <Hero /> goes here */}
+      <h1 style={{ textAlign: "center", marginTop: "20vh", color: "#0ff" }}>
+        Hello World from SporeZ
+      </h1>
     </App>
   );
 }
