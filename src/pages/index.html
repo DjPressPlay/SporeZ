@@ -1,1 +1,52 @@
 
+import React, { useState } from "react";
+
+export default function Index() {
+  const [url, setUrl] = useState("");
+  const [shortened, setShortened] = useState("");
+
+  const handleShorten = () => {
+    if (!url) return;
+    const code = Math.random().toString(36).substring(2, 8);
+    const link = `https://sporez.io/${code}`;
+    setShortened(link);
+  };
+
+  return (
+    <div style={{ padding: "4rem", fontFamily: "sans-serif", textAlign: "center" }}>
+      <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>🌱 Sporez</h1>
+      <p style={{ marginBottom: "2rem" }}>Turn any link into a shareable spore</p>
+
+      <input
+        type="url"
+        placeholder="Paste your link"
+        value={url}
+        onChange={(e) => setUrl(e.target.value)}
+        style={{ padding: "0.75rem", width: "300px", fontSize: "1rem" }}
+      />
+      <button
+        onClick={handleShorten}
+        style={{
+          marginLeft: "1rem",
+          padding: "0.75rem 1.25rem",
+          fontSize: "1rem",
+          backgroundColor: "#00cc99",
+          color: "#fff",
+          border: "none",
+          cursor: "pointer",
+        }}
+      >
+        Create Spore
+      </button>
+
+      {shortened && (
+        <div style={{ marginTop: "2rem", fontSize: "1.25rem" }}>
+          Your spore:{" "}
+          <a href={shortened} target="_blank" rel="noreferrer" style={{ color: "#00cc99" }}>
+            {shortened}
+          </a>
+        </div>
+      )}
+    </div>
+  );
+}
