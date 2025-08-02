@@ -1,19 +1,8 @@
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { Features } from "@/components/Features";
-import { Stats } from "@/components/Stats";
-import { Footer } from "@/components/Footer";
-
-const Index = () => {
+import App from "../app";
+export default function Index() {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <Hero />
-      <Features />
-      <Stats />
-      <Footer />
-    </div>
+    <App>
+      {/* Content like <Hero /> goes here */}
+    </App>
   );
-};
-
-export default Index;
+}
