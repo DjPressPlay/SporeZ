@@ -1,10 +1,16 @@
-// src/pages/Index.tsx
 import React from "react";
 
 export default function Index() {
   return (
-    <div style={{ color: "white", fontSize: "2rem", textAlign: "center", marginTop: "4rem" }}>
-      Hello World from SporeZ 🌱
+    <div
+      style={{
+        color: "#00f0ff",
+        fontSize: "3rem",
+        textAlign: "center",
+        marginTop: "4rem",
+      }}
+    >
+      Welcome to SporeZ 🌱
     </div>
   );
 }
