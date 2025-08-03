@@ -1,9 +1,11 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
 export default defineConfig({
   plugins: [react()],
-  root: ".", // ✅ ensure this points to where `index.html` is
+  root: ".", // keep this
   build: {
-    rollupOptions: {
-      input: "public/index.html", // ⚠️ Only if you insist on keeping it in /public
-    },
+    outDir: "dist", // default, but you can make this explicit
+    emptyOutDir: true,
   },
 });
