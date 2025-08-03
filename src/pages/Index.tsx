@@ -4,13 +4,18 @@ export default function Index() {
   return (
     <div
       style={{
+        height: "100vh",
+        background: "linear-gradient(to bottom, #000000, #011c22)",
         color: "#00f0ff",
-        fontSize: "3rem",
-        textAlign: "center",
-        marginTop: "4rem",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: "2.5rem",
+        fontFamily: "monospace",
+        textShadow: "0 0 10px #00f0ff88",
       }}
     >
-      Welcome to SporeZ 🌱
+      🌱 SporeZ Activated
     </div>
   );
 }
